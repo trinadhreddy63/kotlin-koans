@@ -37,3 +37,4 @@ fun Shop.findFirstCustomerFrom(city: City): Customer? {
     // Return the first customer who lives in the given city, or null if there is none
     todoCollectionTask()
 }
+private fun givenCity(city: City): (Customer) -> Boolean = { it.city === city }
