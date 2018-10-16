@@ -1,6 +1,7 @@
 package ii_collections
 
 import java.util.*
+import kotlin.collections.HashSet
 
 /*
  * This part of workshop was inspired by:
@@ -17,9 +18,7 @@ fun example0(list: List<Int>) {
 }
 
 fun Shop.getSetOfCustomers(): Set<Customer> {
-
     // Return a set containing all the customers of this shop
 //    return this.customers
     return this.customers.toSet()
 }
-

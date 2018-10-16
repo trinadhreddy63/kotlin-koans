@@ -8,5 +8,7 @@ fun example7() {
 
 fun Shop.groupCustomersByCity(): Map<City, List<Customer>> {
     // Return a map of the customers living in each city
-    todoCollectionTask()
+ val getListCustomerCity= customers.groupBy { it.city }
+    print("getListCustomerCity is:  $getListCustomerCity" )
+    return getListCustomerCity
 }

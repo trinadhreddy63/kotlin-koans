@@ -3,7 +3,7 @@ package iii_conventions
 import util.TODO
 import util.doc26
 
-fun todoTask26_(): Nothing = TODO(
+/*fun todoTask26_(): Nothing = TODO(
     """
         Task 26.
         Uncomment the commented line and make it compile.
@@ -15,9 +15,26 @@ fun todoTask26_(): Nothing = TODO(
     """,
     documentation = doc26(),
     references = { range: ClosedRange<Int> -> }
-)
-
+)*/
 fun checkInRange(date: MyDate, first: MyDate, last: MyDate): Boolean {
-    todoTask26_()
-//    return date in DateRange(first, last)
+    var count=0
+    var first1=first
+    while(first1 < last.nextDay())
+    {
+        if(date.equals(first1))
+        {
+            count++
+            break
+        }
+        else
+        {
+            first1=first.nextDay()
+            continue
+        }
+    }
+    if(count==1)
+        return true
+    else
+        return false
+//   return date in DateRange(first, last)
 }

@@ -13,7 +13,7 @@ data class Product(val name: String, val price: Double) {
 }
 
 data class City(val name: String) {
-    override fun toString() = name
+    override fun toString() = "$name"
 }
 
 
