@@ -17,24 +17,15 @@ import util.doc26
     references = { range: ClosedRange<Int> -> }
 )*/
 fun checkInRange(date: MyDate, first: MyDate, last: MyDate): Boolean {
-    var count=0
-    var first1=first
-    while(first1 < last.nextDay())
-    {
-        if(date.equals(first1))
+        if(date >= first)
         {
-            count++
-            break
+            if(date <= last)
+                return true
+            else
+                return false
         }
-        else
-        {
-            first1=first.nextDay()
-            continue
-        }
-    }
-    if(count==1)
-        return true
     else
-        return false
+            return false
+
 //   return date in DateRange(first, last)
 }

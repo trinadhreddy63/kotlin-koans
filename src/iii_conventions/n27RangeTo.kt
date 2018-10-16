@@ -15,25 +15,16 @@ fun todoTask27(): Nothing = TODO(
 )
 
 fun checkInRange2(date: MyDate, first: MyDate, last: MyDate): Boolean {
-    var count=0
-    var first1=first
-    while(first1 < last.nextDay())
+    if(date >= first)
     {
-        if(date.equals(first1))
-        {
-            count++
-            break
-        }
+        if(date <= last)
+            return true
         else
-        {
-            first1=first.nextDay()
-            continue
-        }
+            return false
     }
-    if(count==1)
-        return true
     else
         return false
+
 
 //    return date in first..last
 }
